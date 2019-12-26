@@ -1,24 +1,68 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled from 'styled-components';
+import logo from './logo.png';
 import './App.css';
+import Icon from "./component/Icon";
+import {Keyword, Constant, String} from "./component/Colors";
+
+const Logo = styled.img`
+  margin-left: 10px;
+`;
+
+const LeftPad = styled.div`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding: 10px;
+`;
+
+const Header = styled.header`
+  margin-bottom: 10px;
+`;
+
+const Link = styled.a`
+    margin-right: 20px;
+`;
+
+const Copyright = styled.div`
+  margin-left: 10px;
+  font-size: 12px;
+  color: #808080;
+`;
 
 function App() {
+  const year = new Date().getFullYear();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        <Logo src={logo} alt="Pair Programming with Me"/>
+      </Header>
+      <div>
+        <LeftPad>watch <Keyword>short</Keyword> videos with <Constant>intense</Constant> coding about common
+          problems based on <String>"real world"</String> scenarios;</LeftPad>
+        <LeftPad><h1><small>host by</small> David SG</h1></LeftPad>
+        <LeftPad>david@pairprogrammingwith.me</LeftPad>
+        <LeftPad>
+          <h2>
+            <Link href="https://twitter.com/PairingWithMe" target="_blank">
+              <Icon group="fab" name="youtube"/>
+            </Link>
+            <Link href="https://github.com/PairingWithMe" target="_blank">
+              <Icon group="fab" name="github"/>
+            </Link>
+            <Link href="https://medium.com/PairingWithMe" target="_blank">
+              <Icon group="fab" name="medium"/>
+            </Link>
+            <Link href="https://twitter.com/PairingWithMe" target="_blank">
+              <Icon group="fab" name="twitter"/>
+            </Link>
+            <Link href="https://instagram.com/PairingWithMe" target="_blank">
+              <Icon group="fab"/>
+            </Link>
+          </h2>
+        </LeftPad>
+      </div>
+      <Copyright>/* Copyright © {year} Pair Programming with Me. All rights reserved. */</Copyright>
     </div>
   );
 }
