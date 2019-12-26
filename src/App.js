@@ -30,6 +30,18 @@ const Copyright = styled.div`
   color: #808080;
 `;
 
+const HostBy = styled.h3`
+  margin-left: 50px;
+  padding: 0 10px;
+  margin-bottom: 0;
+`;
+
+const Title = styled.h1`
+  margin-left: 50px;
+  padding: 0 10px;
+  margin-top: 0;
+`;
+
 function App() {
   const year = new Date().getFullYear();
   return (
@@ -40,11 +52,12 @@ function App() {
       <div>
         <LeftPad>watch <Keyword>short</Keyword> videos with <Constant>intense</Constant> coding about common
           problems based on <String>"real world"</String> scenarios;</LeftPad>
-        <LeftPad><h1><small>host by</small> David SG</h1></LeftPad>
+        <HostBy><small>host by</small></HostBy>
+        <Title>David SG</Title>
         <LeftPad>david@pairprogrammingwith.me</LeftPad>
         <LeftPad>
           <h2>
-            <Link href="https://twitter.com/PairingWithMe" target="_blank">
+            <Link href="https://www.youtube.com/channel/UCIseyoNPNvBKUv37RPuzw1w" target="_blank">
               <Icon group="fab" name="youtube"/>
             </Link>
             <Link href="https://github.com/PairingWithMe" target="_blank">
@@ -57,7 +70,7 @@ function App() {
               <Icon group="fab" name="twitter"/>
             </Link>
             <Link href="https://instagram.com/PairingWithMe" target="_blank">
-              <Icon group="fab"/>
+              <Icon group="fab" name="instagram" />
             </Link>
           </h2>
         </LeftPad>
